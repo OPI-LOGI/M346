@@ -1,0 +1,15 @@
+#cloud-config
+users: # Benutzer: Eine Liste von Benutzerkonten, die erstellt werden sollen
+  - name: ubuntu # Benutzername: Der Name des Benutzerkontos
+    sudo: ALL=(ALL) NOPASSWD:ALL # sudo-Regeln für diesen Benutzer: Ermöglicht dem Benutzer, sudo ohne Passwortabfrage zu verwenden
+    groups: users, admin # Gruppen: Die Benutzergruppen, denen der Benutzer angehört
+    home: /home/ubuntu # Home-Verzeichnis: Das Home-Verzeichnis für den Benutzer
+    shell: /bin/bash # Shell: Die Standard-Shell für den Benutzer
+    ssh_authorized_keys: # SSH-Schlüssel: Eine Liste von öffentlichen SSH-Schlüsseln, die für den SSH-Zugang autorisiert sind
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0WGP1EZykEtv5YGC9nMiPFW3U3DmZNzKFO5nEu6uozEHh4jLZzPNHSrfFTuQ2GnRDSt+XbOtTLdcj26+iPNiFoFha42aCIzYjt6V8Z+SQ9pzF4jPPzxwXfDdkEWylgoNnZ+4MG1lNFqa8aO7F62tX0Yj5khjC0Bs7Mb2cHLx1XZaxJV6qSaulDuBbLYe8QUZXkMc7wmob3PM0kflfolR3LE7LResIHWa4j4FL6r5cQmFlDU2BDPpKMFMGUfRSFiUtaWBNXFOWHQBC2+uKmuMPYP4vJC9sBgqMvPN/X2KyemqdMvdKXnCfrzadHuSSJYEzD64Cve5Zl9yVvY4AqyBD aws-key       
+ssh_pwauth: false # SSH-Passwortauthentifizierung: Deaktiviert die Möglichkeit, sich mit einem Passwort über SSH anzumelden
+disable_root: false # Root-Login deaktivieren: Erlaubt oder verbietet den Root-Login
+package_update: true # Paketaktualisierung: Aktiviert die Aktualisierung von Paketen beim Start
+packages: # Pakete: Eine Liste von Paketen, die beim Start installiert werden sollen
+  - curl 
+  - wget 
