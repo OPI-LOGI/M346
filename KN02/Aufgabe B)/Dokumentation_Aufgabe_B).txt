@@ -1,0 +1,3 @@
+### Keygen Private/Public Key
+In dieser Aufgabe musste ich vom Private Key einen Public Key generieren lassen. Leider hatte ich ein Problem, welches mich nicht ein Public Key aus einem Private Key generieren lässt. Nach vielen Versuchen und probierens des Problem behebung funktionierte es nicht. Ich habe es zu Hause nochmals auf meinem anderen Rechner probiert den Public Key zu erstellen und dort funktionierte es einwandfrei.
+
