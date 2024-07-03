@@ -1,0 +1,24 @@
+#cloud-config
+hostname: Corsin
+
+users:
+  - name: ubuntu
+    gecos: Ubuntu User
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    shell: /bin/bash
+    home: /home/ubuntu
+    groups: users, admin
+    ssh-authorized-keys:
+      - xxxaaabbbcccxxx 
+
+  - name: tbz
+    gecos: TBZ User
+    sudo: []
+    shell: /bin/bash
+    home: /home/tbz
+    groups: users
+    lock_passwd: true
+    inactive: true
+
+ssh_pwauth: true
+package_update: true
